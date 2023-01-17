@@ -6,12 +6,13 @@ In this data science project I walked through the process of building a Sports P
 
 # Tools used to create the project-
 1. Python
-2. Numpy and pandas for data cleaning
-3. Matplotlib for data visualization
-4. Sklearn for model building
-5. Jupyter Notebook in Visual Studio Code as IDE
-6. Python flask server for http server
-7. HTML/CSS/Javascript for UI
+2. OpenCV for working with images
+3. Numpy and pandas for data cleaning
+4. Matplotlib for data visualization
+5. Sklearn for model building
+6. Jupyter Notebook in Visual Studio Code as IDE
+7. Python flask server for http server
+8. HTML/CSS/Javascript for UI
 
 # Deploy this app to cloud (GCP VM)-
 
@@ -31,7 +32,7 @@ sudo apt-get update
 sudo apt-get install nginx
 ```
 6.  We can check whether the nginx server is running by loading the url of the instance in the browser.
-7. Now login to your instance and transfer the application folder (download this repo, extract it and rename the folder as SportsPersonClassifier, this folder is now your application folder😊) into the EC2 instance using WinSCP application.
+7. Now login to your instance and transfer the application folder into /home/ubuntu/ (download this repo, extract it and rename the folder as SportsPersonClassifier, this folder is now your application folder😊) in the VM instance using WinSCP application.
 8. Install python using the command-
 ```
 sudo apt-get install python3-pip
@@ -47,7 +48,7 @@ sudo pip3 install Pywavelets
 ```
 sudo apt-get install libgl1
 ```
-11. Navigate to the location /etc/nginx. Change the configuration of the nginx.conf file to support the upload of large sized images
+11. Navigate to the location /etc/nginx. Change the configuration of the nginx.conf file to support the upload of large sized images-
 ```
 user www-data;
 worker_processes auto;
@@ -143,7 +144,7 @@ http {
 ```
 cd /etc/nginx/sites-enabled
 ```
-13.  Unlink the deafult file using the command-
+13. Unlink the deafult file using the command-
 ```
 sudo unlink default
 ```
@@ -199,4 +200,5 @@ tmux
 ```
 python3 SportsPersonClassifier/server/artifacts/server.py
 ```
-22. To exit the tmux window press 
+22. To exit the tmux window press Ctrl + B and then D.
+23. Reload the instance link in the browser and see the magic❤️. Have fun with it 😇 Congratulations😍😊.
